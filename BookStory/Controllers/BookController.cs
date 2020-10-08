@@ -10,14 +10,16 @@ namespace BookStory.Controllers
 {
     public class BookController : Controller
     {
+
+
         private readonly BooksRespository _respository = null;
         public BookController()
         {
             _respository = new BooksRespository();
         }
+
         public IActionResult  GetAllBook()
         {
-           
             var data= _respository.GetAllBooks();
             return View(data);
         }

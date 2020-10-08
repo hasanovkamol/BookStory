@@ -12,9 +12,15 @@ namespace BookStory.Controllers
         {
             return View();
         }
-        public IActionResult Contect()
+        public IActionResult Contact()
         {
-            return View("Contect.cshtml");
+
+            return View();
+        }
+        public IActionResult About()
+        {
+            ViewData["title"] = "About Page ||";
+            return View();
         }
     }
 }

@@ -16,7 +16,8 @@ namespace BookStory
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews(); 
+            services.AddControllersWithViews();
+            services.AddRazorPages();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -31,6 +32,10 @@ namespace BookStory
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
+                //endpoints.MapControllerRoute(
+                //    name: "default",
+                //    pattern: "{ controller = Home}/{ action = Index}/{ id ?}"
+                //    );
             });
         }
     }

@@ -1,12 +1,13 @@
-﻿@using BookStory.Moduls
+﻿
+@using BookStory.Moduls
 @model BooksModul
 @{
     ViewData["Title"] = "GetBook";
 }
 
-<div class="container">
+<div class="container" id="sim">
     <div class="display-4">
-        <div class="row" >
+        <div class="row">
             <div class="col-md-4">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -59,7 +60,7 @@
                         <button class="btn btn-outline-primary">Read Now</button>
                     </div>
                 </div>
-            </div>         
+            </div>
             <ul class="list-group">
                 <li class="list-group-item"><span class="font-weight-bold">Category - </span> @Model.Category</li>
                 <li class="list-group-item"><span class="font-weight-bold">Total Page - </span>@Model.TotalPage</li>
