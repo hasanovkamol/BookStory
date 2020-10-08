@@ -17,12 +17,14 @@ namespace BookStory.Controllers
         }
         public IActionResult  GetAllBook()
         {
+           
             var data= _respository.GetAllBooks();
             return View(data);
         }
-        public BooksModul GetBook(int id)
+        public IActionResult GetBook(int id)
         {
-            return _respository.GetBookById(id);
+            var data=_respository.GetBookById(id);
+            return View(data);
         }
         public List<BooksModul> SearchBooks(string title,string Authorname)
         {
